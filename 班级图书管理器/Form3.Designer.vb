@@ -33,12 +33,12 @@ Partial Class Form3
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.RibbonControl1 = New DevComponents.DotNetBar.RibbonControl()
         Me.RibbonPanel1 = New DevComponents.DotNetBar.RibbonPanel()
         Me.RibbonBar7 = New DevComponents.DotNetBar.RibbonBar()
@@ -197,12 +197,6 @@ Partial Class Form3
         Me.SuperTabControl1 = New DevComponents.DotNetBar.SuperTabControl()
         Me.SuperTabControlPanel1 = New DevComponents.DotNetBar.SuperTabControlPanel()
         Me.DataGridViewX1 = New DevComponents.DotNetBar.Controls.DataGridViewX()
-        Me.持书人姓名DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.图书名称DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.是否借出DataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.借出人姓名DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.预定返还日期 = New DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn()
-        Me.备注 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ChineseBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.DatabaseCBCDataSet4 = New 班级图书管理器.DatabaseCBCDataSet4()
         Me.SuperTabItem1 = New DevComponents.DotNetBar.SuperTabItem()
@@ -221,8 +215,6 @@ Partial Class Form3
         Me.SuperTabItem2 = New DevComponents.DotNetBar.SuperTabItem()
         Me.SuperTabControlPanel3 = New DevComponents.DotNetBar.SuperTabControlPanel()
         Me.DataGridViewX3 = New DevComponents.DotNetBar.Controls.DataGridViewX()
-        Me.日期DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.备注DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UpdateHistoryBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.DatabaseCBCDataSetUH2 = New 班级图书管理器.DatabaseCBCDataSetUH2()
         Me.SuperTabItem3 = New DevComponents.DotNetBar.SuperTabItem()
@@ -264,6 +256,15 @@ Partial Class Form3
         Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.ChineseTableAdapter2 = New 班级图书管理器.DatabaseCBCDataSet4TableAdapters.ChineseTableAdapter()
         Me.EnglishTableAdapter3 = New 班级图书管理器.DatabaseCBCDataSet5TableAdapters.EnglishTableAdapter()
+        Me.持书人姓名DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.图书名称DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.是否借出DataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.借出人姓名DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.借出日期DataGridViewTextBoxColumn = New DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn()
+        Me.返还日期DataGridViewTextBoxColumn = New DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn()
+        Me.备注DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.日期DataGridViewTextBoxColumn = New DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn()
+        Me.备注DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RibbonControl1.SuspendLayout()
         Me.RibbonPanel1.SuspendLayout()
         Me.RibbonBar2.SuspendLayout()
@@ -384,10 +385,10 @@ Partial Class Form3
         Me.RibbonPanel1.Controls.Add(Me.RibbonBar4)
         Me.RibbonPanel1.Controls.Add(Me.RibbonBar1)
         Me.RibbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RibbonPanel1.Location = New System.Drawing.Point(0, 72)
+        Me.RibbonPanel1.Location = New System.Drawing.Point(0, 55)
         Me.RibbonPanel1.Name = "RibbonPanel1"
         Me.RibbonPanel1.Padding = New System.Windows.Forms.Padding(3, 0, 3, 2)
-        Me.RibbonPanel1.Size = New System.Drawing.Size(731, 80)
+        Me.RibbonPanel1.Size = New System.Drawing.Size(731, 97)
         '
         '
         '
@@ -419,7 +420,7 @@ Partial Class Form3
         Me.RibbonBar7.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem11})
         Me.RibbonBar7.Location = New System.Drawing.Point(403, 0)
         Me.RibbonBar7.Name = "RibbonBar7"
-        Me.RibbonBar7.Size = New System.Drawing.Size(147, 78)
+        Me.RibbonBar7.Size = New System.Drawing.Size(147, 95)
         Me.RibbonBar7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar7.TabIndex = 3
         Me.RibbonBar7.Text = "屏幕键盘"
@@ -458,7 +459,7 @@ Partial Class Form3
         Me.RibbonBar2.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ControlContainerItem1, Me.ButtonItem4})
         Me.RibbonBar2.Location = New System.Drawing.Point(257, 0)
         Me.RibbonBar2.Name = "RibbonBar2"
-        Me.RibbonBar2.Size = New System.Drawing.Size(146, 78)
+        Me.RibbonBar2.Size = New System.Drawing.Size(146, 95)
         Me.RibbonBar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar2.TabIndex = 2
         Me.RibbonBar2.Text = "快捷输入记录"
@@ -476,9 +477,9 @@ Partial Class Form3
         Me.ComboBox2.DataSource = Me.HistorySetBindingSource
         Me.ComboBox2.DisplayMember = "预定记录"
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(4, 4)
+        Me.ComboBox2.Location = New System.Drawing.Point(4, 26)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(96, 39)
+        Me.ComboBox2.Size = New System.Drawing.Size(96, 25)
         Me.ComboBox2.TabIndex = 2
         Me.ComboBox2.ValueMember = "预定记录"
         '
@@ -526,7 +527,7 @@ Partial Class Form3
         Me.RibbonBar4.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ControlContainerItem2, Me.ButtonItem5})
         Me.RibbonBar4.Location = New System.Drawing.Point(111, 0)
         Me.RibbonBar4.Name = "RibbonBar4"
-        Me.RibbonBar4.Size = New System.Drawing.Size(146, 78)
+        Me.RibbonBar4.Size = New System.Drawing.Size(146, 95)
         Me.RibbonBar4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar4.TabIndex = 1
         Me.RibbonBar4.Text = "快捷输入姓名"
@@ -544,9 +545,9 @@ Partial Class Form3
         Me.ComboBox1.DataSource = Me.NamesBindingSource
         Me.ComboBox1.DisplayMember = "姓名"
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(4, 4)
+        Me.ComboBox1.Location = New System.Drawing.Point(4, 26)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(96, 39)
+        Me.ComboBox1.Size = New System.Drawing.Size(96, 25)
         Me.ComboBox1.TabIndex = 2
         Me.ComboBox1.ValueMember = "姓名"
         '
@@ -593,7 +594,7 @@ Partial Class Form3
         Me.RibbonBar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem14, Me.ButtonItem2})
         Me.RibbonBar1.Location = New System.Drawing.Point(3, 0)
         Me.RibbonBar1.Name = "RibbonBar1"
-        Me.RibbonBar1.Size = New System.Drawing.Size(108, 78)
+        Me.RibbonBar1.Size = New System.Drawing.Size(108, 95)
         Me.RibbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar1.TabIndex = 0
         Me.RibbonBar1.Text = "保存"
@@ -686,7 +687,7 @@ Partial Class Form3
         Me.ComboBox3.Items.AddRange(New Object() {"Office2007Blue", "Office2007Silver", "Office2007Black", "Office2007VistaGlass", "Office2010Silver", "Office2010Blue", "Office2010Black", "Windows7Blue", "VisualStudio2010Blue", "Office2013", "VisualStudio2012Light"})
         Me.ComboBox3.Location = New System.Drawing.Point(4, 4)
         Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(231, 39)
+        Me.ComboBox3.Size = New System.Drawing.Size(231, 25)
         Me.ComboBox3.TabIndex = 10002
         '
         'ControlContainerItem3
@@ -1020,7 +1021,7 @@ Partial Class Form3
         Me.SuperTabControl2.ReorderTabsEnabled = False
         Me.SuperTabControl2.SelectedTabFont = New System.Drawing.Font("Segoe UI", 9.75!)
         Me.SuperTabControl2.SelectedTabIndex = -1
-        Me.SuperTabControl2.Size = New System.Drawing.Size(739, 534)
+        Me.SuperTabControl2.Size = New System.Drawing.Size(739, 532)
         Me.SuperTabControl2.TabAlignment = DevComponents.DotNetBar.eTabStripAlignment.Left
         Me.SuperTabControl2.TabFont = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SuperTabControl2.TabHorizontalSpacing = 16
@@ -1037,7 +1038,7 @@ Partial Class Form3
         Me.SuperTabControlPanel6.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SuperTabControlPanel6.Location = New System.Drawing.Point(236, 0)
         Me.SuperTabControlPanel6.Name = "SuperTabControlPanel6"
-        Me.SuperTabControlPanel6.Size = New System.Drawing.Size(503, 534)
+        Me.SuperTabControlPanel6.Size = New System.Drawing.Size(503, 532)
         Me.SuperTabControlPanel6.TabIndex = 0
         Me.SuperTabControlPanel6.TabItem = Me.SuperTabItem6
         '
@@ -1325,7 +1326,7 @@ Partial Class Form3
         Me.TextBoxX2.Name = "TextBoxX2"
         Me.TextBoxX2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
         Me.TextBoxX2.PreventEnterBeep = True
-        Me.TextBoxX2.Size = New System.Drawing.Size(518, 39)
+        Me.TextBoxX2.Size = New System.Drawing.Size(518, 23)
         Me.TextBoxX2.TabIndex = 1
         '
         'LabelX8
@@ -1355,7 +1356,7 @@ Partial Class Form3
         Me.TextBoxX1.Name = "TextBoxX1"
         Me.TextBoxX1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
         Me.TextBoxX1.PreventEnterBeep = True
-        Me.TextBoxX1.Size = New System.Drawing.Size(521, 39)
+        Me.TextBoxX1.Size = New System.Drawing.Size(521, 23)
         Me.TextBoxX1.TabIndex = 3
         '
         'LabelX7
@@ -1538,7 +1539,7 @@ Partial Class Form3
         Me.TextBoxX4.Name = "TextBoxX4"
         Me.TextBoxX4.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
         Me.TextBoxX4.PreventEnterBeep = True
-        Me.TextBoxX4.Size = New System.Drawing.Size(323, 39)
+        Me.TextBoxX4.Size = New System.Drawing.Size(323, 23)
         Me.TextBoxX4.TabIndex = 3
         '
         'SuperTabItem8
@@ -1814,7 +1815,7 @@ Partial Class Form3
         Me.TextBoxX3.Name = "TextBoxX3"
         Me.TextBoxX3.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
         Me.TextBoxX3.PreventEnterBeep = True
-        Me.TextBoxX3.Size = New System.Drawing.Size(323, 39)
+        Me.TextBoxX3.Size = New System.Drawing.Size(323, 23)
         Me.TextBoxX3.TabIndex = 0
         '
         'LabelItem2
@@ -2077,7 +2078,7 @@ Partial Class Form3
         Me.NumericUpDown2.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.NumericUpDown2.Minimum = New Decimal(New Integer() {10000, 0, 0, -2147483648})
         Me.NumericUpDown2.Name = "NumericUpDown2"
-        Me.NumericUpDown2.Size = New System.Drawing.Size(145, 50)
+        Me.NumericUpDown2.Size = New System.Drawing.Size(145, 29)
         Me.NumericUpDown2.TabIndex = 2
         '
         'LabelX19
@@ -2101,7 +2102,7 @@ Partial Class Form3
         Me.NumericUpDown1.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.NumericUpDown1.Minimum = New Decimal(New Integer() {10000, 0, 0, -2147483648})
         Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(145, 50)
+        Me.NumericUpDown1.Size = New System.Drawing.Size(145, 29)
         Me.NumericUpDown1.TabIndex = 0
         '
         '大小
@@ -2145,7 +2146,7 @@ Partial Class Form3
         Me.NumericUpDown4.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.NumericUpDown4.Minimum = New Decimal(New Integer() {10000, 0, 0, -2147483648})
         Me.NumericUpDown4.Name = "NumericUpDown4"
-        Me.NumericUpDown4.Size = New System.Drawing.Size(145, 50)
+        Me.NumericUpDown4.Size = New System.Drawing.Size(145, 29)
         Me.NumericUpDown4.TabIndex = 6
         '
         'LabelX22
@@ -2169,7 +2170,7 @@ Partial Class Form3
         Me.NumericUpDown3.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.NumericUpDown3.Minimum = New Decimal(New Integer() {10000, 0, 0, -2147483648})
         Me.NumericUpDown3.Name = "NumericUpDown3"
-        Me.NumericUpDown3.Size = New System.Drawing.Size(145, 50)
+        Me.NumericUpDown3.Size = New System.Drawing.Size(145, 29)
         Me.NumericUpDown3.TabIndex = 4
         '
         '位置
@@ -2381,8 +2382,8 @@ Partial Class Form3
         Me.SuperTabControl1.ControlBox.Name = ""
         Me.SuperTabControl1.ControlBox.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.SuperTabControl1.ControlBox.MenuBox, Me.SuperTabControl1.ControlBox.CloseBox})
         Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel1)
-        Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel2)
         Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel3)
+        Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel2)
         Me.SuperTabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SuperTabControl1.ForeColor = System.Drawing.Color.Black
         Me.SuperTabControl1.Location = New System.Drawing.Point(5, 153)
@@ -2390,7 +2391,7 @@ Partial Class Form3
         Me.SuperTabControl1.ReorderTabsEnabled = True
         Me.SuperTabControl1.SelectedTabFont = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Bold)
         Me.SuperTabControl1.SelectedTabIndex = 0
-        Me.SuperTabControl1.Size = New System.Drawing.Size(731, 374)
+        Me.SuperTabControl1.Size = New System.Drawing.Size(731, 368)
         Me.SuperTabControl1.TabFont = New System.Drawing.Font("微软雅黑", 9.0!)
         Me.SuperTabControl1.TabIndex = 1
         Me.SuperTabControl1.Tabs.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.SuperTabItem1, Me.SuperTabItem2, Me.SuperTabItem3})
@@ -2400,9 +2401,9 @@ Partial Class Form3
         '
         Me.SuperTabControlPanel1.Controls.Add(Me.DataGridViewX1)
         Me.SuperTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SuperTabControlPanel1.Location = New System.Drawing.Point(0, 47)
+        Me.SuperTabControlPanel1.Location = New System.Drawing.Point(0, 30)
         Me.SuperTabControlPanel1.Name = "SuperTabControlPanel1"
-        Me.SuperTabControlPanel1.Size = New System.Drawing.Size(731, 327)
+        Me.SuperTabControlPanel1.Size = New System.Drawing.Size(731, 338)
         Me.SuperTabControlPanel1.TabIndex = 1
         Me.SuperTabControlPanel1.TabItem = Me.SuperTabItem1
         '
@@ -2422,7 +2423,7 @@ Partial Class Form3
         DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewX1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewX1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.持书人姓名DataGridViewTextBoxColumn, Me.图书名称DataGridViewTextBoxColumn, Me.是否借出DataGridViewCheckBoxColumn, Me.借出人姓名DataGridViewTextBoxColumn, Me.预定返还日期, Me.备注})
+        Me.DataGridViewX1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.持书人姓名DataGridViewTextBoxColumn, Me.图书名称DataGridViewTextBoxColumn, Me.是否借出DataGridViewCheckBoxColumn, Me.借出人姓名DataGridViewTextBoxColumn, Me.借出日期DataGridViewTextBoxColumn, Me.返还日期DataGridViewTextBoxColumn, Me.备注DataGridViewTextBoxColumn1})
         Me.DataGridViewX1.DataSource = Me.ChineseBindingSource2
         DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle8.BackColor = System.Drawing.Color.White
@@ -2447,84 +2448,8 @@ Partial Class Form3
         Me.DataGridViewX1.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.DataGridViewX1.RowHeadersWidth = 82
         Me.DataGridViewX1.RowTemplate.Height = 23
-        Me.DataGridViewX1.Size = New System.Drawing.Size(731, 327)
+        Me.DataGridViewX1.Size = New System.Drawing.Size(731, 338)
         Me.DataGridViewX1.TabIndex = 0
-        '
-        '持书人姓名DataGridViewTextBoxColumn
-        '
-        Me.持书人姓名DataGridViewTextBoxColumn.DataPropertyName = "持书人姓名"
-        Me.持书人姓名DataGridViewTextBoxColumn.HeaderText = "持书人姓名"
-        Me.持书人姓名DataGridViewTextBoxColumn.MinimumWidth = 10
-        Me.持书人姓名DataGridViewTextBoxColumn.Name = "持书人姓名DataGridViewTextBoxColumn"
-        '
-        '图书名称DataGridViewTextBoxColumn
-        '
-        Me.图书名称DataGridViewTextBoxColumn.DataPropertyName = "图书名称"
-        Me.图书名称DataGridViewTextBoxColumn.HeaderText = "图书名称"
-        Me.图书名称DataGridViewTextBoxColumn.MinimumWidth = 10
-        Me.图书名称DataGridViewTextBoxColumn.Name = "图书名称DataGridViewTextBoxColumn"
-        '
-        '是否借出DataGridViewCheckBoxColumn
-        '
-        Me.是否借出DataGridViewCheckBoxColumn.DataPropertyName = "是否借出"
-        Me.是否借出DataGridViewCheckBoxColumn.HeaderText = "是否借出"
-        Me.是否借出DataGridViewCheckBoxColumn.MinimumWidth = 10
-        Me.是否借出DataGridViewCheckBoxColumn.Name = "是否借出DataGridViewCheckBoxColumn"
-        '
-        '借出人姓名DataGridViewTextBoxColumn
-        '
-        Me.借出人姓名DataGridViewTextBoxColumn.DataPropertyName = "借出人姓名"
-        Me.借出人姓名DataGridViewTextBoxColumn.HeaderText = "借出人姓名"
-        Me.借出人姓名DataGridViewTextBoxColumn.MinimumWidth = 10
-        Me.借出人姓名DataGridViewTextBoxColumn.Name = "借出人姓名DataGridViewTextBoxColumn"
-        '
-        '预定返还日期
-        '
-        Me.预定返还日期.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        '
-        '
-        '
-        Me.预定返还日期.BackgroundStyle.BackColor = System.Drawing.Color.White
-        Me.预定返还日期.BackgroundStyle.Class = "DataGridViewDateTimeBorder"
-        Me.预定返还日期.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.预定返还日期.BackgroundStyle.TextColor = System.Drawing.Color.Black
-        Me.预定返还日期.DataPropertyName = "预定返还日期"
-        Me.预定返还日期.HeaderText = "返还日期"
-        Me.预定返还日期.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left
-        Me.预定返还日期.MinimumWidth = 10
-        '
-        '
-        '
-        Me.预定返还日期.MonthCalendar.AnnuallyMarkedDates = New Date(-1) {}
-        '
-        '
-        '
-        Me.预定返还日期.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.预定返还日期.MonthCalendar.CalendarDimensions = New System.Drawing.Size(1, 1)
-        '
-        '
-        '
-        Me.预定返还日期.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.预定返还日期.MonthCalendar.DisplayMonth = New Date(2016, 2, 1, 0, 0, 0, 0)
-        Me.预定返还日期.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday
-        Me.预定返还日期.MonthCalendar.MarkedDates = New Date(-1) {}
-        Me.预定返还日期.MonthCalendar.MonthlyMarkedDates = New Date(-1) {}
-        '
-        '
-        '
-        Me.预定返还日期.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.预定返还日期.MonthCalendar.WeeklyMarkedDays = New System.DayOfWeek(-1) {}
-        Me.预定返还日期.Name = "预定返还日期"
-        Me.预定返还日期.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.预定返还日期.Width = 155
-        '
-        '备注
-        '
-        Me.备注.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.备注.DataPropertyName = "备注"
-        Me.备注.HeaderText = "备注"
-        Me.备注.MinimumWidth = 10
-        Me.备注.Name = "备注"
         '
         'ChineseBindingSource2
         '
@@ -2550,7 +2475,7 @@ Partial Class Form3
         Me.SuperTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SuperTabControlPanel2.Location = New System.Drawing.Point(0, 30)
         Me.SuperTabControlPanel2.Name = "SuperTabControlPanel2"
-        Me.SuperTabControlPanel2.Size = New System.Drawing.Size(731, 346)
+        Me.SuperTabControlPanel2.Size = New System.Drawing.Size(731, 338)
         Me.SuperTabControlPanel2.TabIndex = 0
         Me.SuperTabControlPanel2.TabItem = Me.SuperTabItem2
         '
@@ -2560,41 +2485,41 @@ Partial Class Form3
         Me.DataGridViewX2.AutoGenerateColumns = False
         Me.DataGridViewX2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridViewX2.BackgroundColor = System.Drawing.Color.White
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("微软雅黑", 9.0!)
-        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewX2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("微软雅黑", 9.0!)
+        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewX2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
         Me.DataGridViewX2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewX2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.持书人姓名DataGridViewTextBoxColumn1, Me.图书中文名称DataGridViewTextBoxColumn, Me.图书英文名称DataGridViewTextBoxColumn, Me.是否借出DataGridViewCheckBoxColumn1, Me.借出人姓名DataGridViewTextBoxColumn1, Me.借出日期, Me.返还日期, Me.DataGridViewTextBoxColumn1})
         Me.DataGridViewX2.DataSource = Me.EnglishBindingSource3
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("微软雅黑", 9.0!)
-        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewX2.DefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("微软雅黑", 9.0!)
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewX2.DefaultCellStyle = DataGridViewCellStyle14
         Me.DataGridViewX2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridViewX2.EnableHeadersVisualStyles = False
         Me.DataGridViewX2.GridColor = System.Drawing.Color.FromArgb(CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
         Me.DataGridViewX2.Location = New System.Drawing.Point(0, 0)
         Me.DataGridViewX2.Name = "DataGridViewX2"
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("微软雅黑", 9.0!)
-        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewX2.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("微软雅黑", 9.0!)
+        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewX2.RowHeadersDefaultCellStyle = DataGridViewCellStyle15
         Me.DataGridViewX2.RowHeadersWidth = 82
         Me.DataGridViewX2.RowTemplate.Height = 23
-        Me.DataGridViewX2.Size = New System.Drawing.Size(731, 346)
+        Me.DataGridViewX2.Size = New System.Drawing.Size(731, 338)
         Me.DataGridViewX2.TabIndex = 0
         '
         '持书人姓名DataGridViewTextBoxColumn1
@@ -2604,7 +2529,7 @@ Partial Class Form3
         Me.持书人姓名DataGridViewTextBoxColumn1.HeaderText = "持书人姓名"
         Me.持书人姓名DataGridViewTextBoxColumn1.MinimumWidth = 10
         Me.持书人姓名DataGridViewTextBoxColumn1.Name = "持书人姓名DataGridViewTextBoxColumn1"
-        Me.持书人姓名DataGridViewTextBoxColumn1.Width = 179
+        Me.持书人姓名DataGridViewTextBoxColumn1.Width = 93
         '
         '图书中文名称DataGridViewTextBoxColumn
         '
@@ -2613,7 +2538,7 @@ Partial Class Form3
         Me.图书中文名称DataGridViewTextBoxColumn.HeaderText = "图书中文名称"
         Me.图书中文名称DataGridViewTextBoxColumn.MinimumWidth = 10
         Me.图书中文名称DataGridViewTextBoxColumn.Name = "图书中文名称DataGridViewTextBoxColumn"
-        Me.图书中文名称DataGridViewTextBoxColumn.Width = 143
+        Me.图书中文名称DataGridViewTextBoxColumn.Width = 75
         '
         '图书英文名称DataGridViewTextBoxColumn
         '
@@ -2622,7 +2547,7 @@ Partial Class Form3
         Me.图书英文名称DataGridViewTextBoxColumn.HeaderText = "图书英文名称"
         Me.图书英文名称DataGridViewTextBoxColumn.MinimumWidth = 10
         Me.图书英文名称DataGridViewTextBoxColumn.Name = "图书英文名称DataGridViewTextBoxColumn"
-        Me.图书英文名称DataGridViewTextBoxColumn.Width = 143
+        Me.图书英文名称DataGridViewTextBoxColumn.Width = 75
         '
         '是否借出DataGridViewCheckBoxColumn1
         '
@@ -2631,7 +2556,7 @@ Partial Class Form3
         Me.是否借出DataGridViewCheckBoxColumn1.HeaderText = "是否借出"
         Me.是否借出DataGridViewCheckBoxColumn1.MinimumWidth = 10
         Me.是否借出DataGridViewCheckBoxColumn1.Name = "是否借出DataGridViewCheckBoxColumn1"
-        Me.是否借出DataGridViewCheckBoxColumn1.Width = 116
+        Me.是否借出DataGridViewCheckBoxColumn1.Width = 62
         '
         '借出人姓名DataGridViewTextBoxColumn1
         '
@@ -2640,7 +2565,7 @@ Partial Class Form3
         Me.借出人姓名DataGridViewTextBoxColumn1.HeaderText = "借出人姓名"
         Me.借出人姓名DataGridViewTextBoxColumn1.MinimumWidth = 10
         Me.借出人姓名DataGridViewTextBoxColumn1.Name = "借出人姓名DataGridViewTextBoxColumn1"
-        Me.借出人姓名DataGridViewTextBoxColumn1.Width = 143
+        Me.借出人姓名DataGridViewTextBoxColumn1.Width = 75
         '
         '借出日期
         '
@@ -2679,7 +2604,7 @@ Partial Class Form3
         Me.借出日期.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.借出日期.MonthCalendar.WeeklyMarkedDays = New System.DayOfWeek(-1) {}
         Me.借出日期.Name = "借出日期"
-        Me.借出日期.Width = 122
+        Me.借出日期.Width = 64
         '
         '返还日期
         '
@@ -2718,7 +2643,7 @@ Partial Class Form3
         Me.返还日期.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.返还日期.MonthCalendar.WeeklyMarkedDays = New System.DayOfWeek(-1) {}
         Me.返还日期.Name = "返还日期"
-        Me.返还日期.Width = 122
+        Me.返还日期.Width = 64
         '
         'DataGridViewTextBoxColumn1
         '
@@ -2752,7 +2677,7 @@ Partial Class Form3
         Me.SuperTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SuperTabControlPanel3.Location = New System.Drawing.Point(0, 30)
         Me.SuperTabControlPanel3.Name = "SuperTabControlPanel3"
-        Me.SuperTabControlPanel3.Size = New System.Drawing.Size(731, 350)
+        Me.SuperTabControlPanel3.Size = New System.Drawing.Size(731, 338)
         Me.SuperTabControlPanel3.TabIndex = 0
         Me.SuperTabControlPanel3.TabItem = Me.SuperTabItem3
         '
@@ -2762,56 +2687,42 @@ Partial Class Form3
         Me.DataGridViewX3.AutoGenerateColumns = False
         Me.DataGridViewX3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridViewX3.BackgroundColor = System.Drawing.Color.White
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("微软雅黑", 9.0!)
-        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewX3.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("微软雅黑", 9.0!)
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewX3.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
         Me.DataGridViewX3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewX3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.日期DataGridViewTextBoxColumn, Me.备注DataGridViewTextBoxColumn})
         Me.DataGridViewX3.DataSource = Me.UpdateHistoryBindingSource1
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle14.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("微软雅黑", 9.0!)
-        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewX3.DefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("微软雅黑", 9.0!)
+        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewX3.DefaultCellStyle = DataGridViewCellStyle11
         Me.DataGridViewX3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridViewX3.EnableHeadersVisualStyles = False
         Me.DataGridViewX3.GridColor = System.Drawing.Color.FromArgb(CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
         Me.DataGridViewX3.Location = New System.Drawing.Point(0, 0)
         Me.DataGridViewX3.Name = "DataGridViewX3"
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle15.Font = New System.Drawing.Font("微软雅黑", 9.0!)
-        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewX3.RowHeadersDefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("微软雅黑", 9.0!)
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewX3.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
         Me.DataGridViewX3.RowHeadersWidth = 82
         Me.DataGridViewX3.RowTemplate.Height = 23
-        Me.DataGridViewX3.Size = New System.Drawing.Size(731, 350)
+        Me.DataGridViewX3.Size = New System.Drawing.Size(731, 338)
         Me.DataGridViewX3.TabIndex = 0
-        '
-        '日期DataGridViewTextBoxColumn
-        '
-        Me.日期DataGridViewTextBoxColumn.DataPropertyName = "日期"
-        Me.日期DataGridViewTextBoxColumn.HeaderText = "日期与时间"
-        Me.日期DataGridViewTextBoxColumn.MinimumWidth = 10
-        Me.日期DataGridViewTextBoxColumn.Name = "日期DataGridViewTextBoxColumn"
-        '
-        '备注DataGridViewTextBoxColumn
-        '
-        Me.备注DataGridViewTextBoxColumn.DataPropertyName = "备注"
-        Me.备注DataGridViewTextBoxColumn.HeaderText = "备注"
-        Me.备注DataGridViewTextBoxColumn.MinimumWidth = 10
-        Me.备注DataGridViewTextBoxColumn.Name = "备注DataGridViewTextBoxColumn"
         '
         'UpdateHistoryBindingSource1
         '
@@ -2884,7 +2795,7 @@ Partial Class Form3
         Me.MetroStatusBar1.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.MetroStatusBar1.ForeColor = System.Drawing.Color.Black
         Me.MetroStatusBar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.LabelState, Me.LabelItem5, Me.LabelItem6})
-        Me.MetroStatusBar1.Location = New System.Drawing.Point(5, 505)
+        Me.MetroStatusBar1.Location = New System.Drawing.Point(5, 499)
         Me.MetroStatusBar1.Name = "MetroStatusBar1"
         Me.MetroStatusBar1.Size = New System.Drawing.Size(731, 22)
         Me.MetroStatusBar1.TabIndex = 2
@@ -3018,9 +2929,158 @@ Partial Class Form3
         '
         Me.EnglishTableAdapter3.ClearBeforeFill = True
         '
+        '持书人姓名DataGridViewTextBoxColumn
+        '
+        Me.持书人姓名DataGridViewTextBoxColumn.DataPropertyName = "持书人姓名"
+        Me.持书人姓名DataGridViewTextBoxColumn.HeaderText = "持书人姓名"
+        Me.持书人姓名DataGridViewTextBoxColumn.Name = "持书人姓名DataGridViewTextBoxColumn"
+        '
+        '图书名称DataGridViewTextBoxColumn
+        '
+        Me.图书名称DataGridViewTextBoxColumn.DataPropertyName = "图书名称"
+        Me.图书名称DataGridViewTextBoxColumn.HeaderText = "图书名称"
+        Me.图书名称DataGridViewTextBoxColumn.Name = "图书名称DataGridViewTextBoxColumn"
+        '
+        '是否借出DataGridViewCheckBoxColumn
+        '
+        Me.是否借出DataGridViewCheckBoxColumn.DataPropertyName = "是否借出"
+        Me.是否借出DataGridViewCheckBoxColumn.HeaderText = "是否借出"
+        Me.是否借出DataGridViewCheckBoxColumn.Name = "是否借出DataGridViewCheckBoxColumn"
+        '
+        '借出人姓名DataGridViewTextBoxColumn
+        '
+        Me.借出人姓名DataGridViewTextBoxColumn.DataPropertyName = "借出人姓名"
+        Me.借出人姓名DataGridViewTextBoxColumn.HeaderText = "借出人姓名"
+        Me.借出人姓名DataGridViewTextBoxColumn.Name = "借出人姓名DataGridViewTextBoxColumn"
+        '
+        '借出日期DataGridViewTextBoxColumn
+        '
+        '
+        '
+        '
+        Me.借出日期DataGridViewTextBoxColumn.BackgroundStyle.BackColor = System.Drawing.Color.White
+        Me.借出日期DataGridViewTextBoxColumn.BackgroundStyle.Class = "DataGridViewDateTimeBorder"
+        Me.借出日期DataGridViewTextBoxColumn.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.借出日期DataGridViewTextBoxColumn.BackgroundStyle.TextColor = System.Drawing.Color.Black
+        Me.借出日期DataGridViewTextBoxColumn.DataPropertyName = "借出日期"
+        Me.借出日期DataGridViewTextBoxColumn.HeaderText = "借出日期"
+        Me.借出日期DataGridViewTextBoxColumn.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left
+        '
+        '
+        '
+        Me.借出日期DataGridViewTextBoxColumn.MonthCalendar.AnnuallyMarkedDates = New Date(-1) {}
+        '
+        '
+        '
+        Me.借出日期DataGridViewTextBoxColumn.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.借出日期DataGridViewTextBoxColumn.MonthCalendar.CalendarDimensions = New System.Drawing.Size(1, 1)
+        '
+        '
+        '
+        Me.借出日期DataGridViewTextBoxColumn.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.借出日期DataGridViewTextBoxColumn.MonthCalendar.DisplayMonth = New Date(2021, 1, 1, 0, 0, 0, 0)
+        Me.借出日期DataGridViewTextBoxColumn.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday
+        Me.借出日期DataGridViewTextBoxColumn.MonthCalendar.MarkedDates = New Date(-1) {}
+        Me.借出日期DataGridViewTextBoxColumn.MonthCalendar.MonthlyMarkedDates = New Date(-1) {}
+        '
+        '
+        '
+        Me.借出日期DataGridViewTextBoxColumn.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.借出日期DataGridViewTextBoxColumn.MonthCalendar.WeeklyMarkedDays = New System.DayOfWeek(-1) {}
+        Me.借出日期DataGridViewTextBoxColumn.Name = "借出日期DataGridViewTextBoxColumn"
+        Me.借出日期DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        '
+        '返还日期DataGridViewTextBoxColumn
+        '
+        '
+        '
+        '
+        Me.返还日期DataGridViewTextBoxColumn.BackgroundStyle.BackColor = System.Drawing.Color.White
+        Me.返还日期DataGridViewTextBoxColumn.BackgroundStyle.Class = "DataGridViewDateTimeBorder"
+        Me.返还日期DataGridViewTextBoxColumn.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.返还日期DataGridViewTextBoxColumn.BackgroundStyle.TextColor = System.Drawing.Color.Black
+        Me.返还日期DataGridViewTextBoxColumn.DataPropertyName = "返还日期"
+        Me.返还日期DataGridViewTextBoxColumn.HeaderText = "返还日期"
+        Me.返还日期DataGridViewTextBoxColumn.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left
+        '
+        '
+        '
+        Me.返还日期DataGridViewTextBoxColumn.MonthCalendar.AnnuallyMarkedDates = New Date(-1) {}
+        '
+        '
+        '
+        Me.返还日期DataGridViewTextBoxColumn.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.返还日期DataGridViewTextBoxColumn.MonthCalendar.CalendarDimensions = New System.Drawing.Size(1, 1)
+        '
+        '
+        '
+        Me.返还日期DataGridViewTextBoxColumn.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.返还日期DataGridViewTextBoxColumn.MonthCalendar.DisplayMonth = New Date(2021, 1, 1, 0, 0, 0, 0)
+        Me.返还日期DataGridViewTextBoxColumn.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday
+        Me.返还日期DataGridViewTextBoxColumn.MonthCalendar.MarkedDates = New Date(-1) {}
+        Me.返还日期DataGridViewTextBoxColumn.MonthCalendar.MonthlyMarkedDates = New Date(-1) {}
+        '
+        '
+        '
+        Me.返还日期DataGridViewTextBoxColumn.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.返还日期DataGridViewTextBoxColumn.MonthCalendar.WeeklyMarkedDays = New System.DayOfWeek(-1) {}
+        Me.返还日期DataGridViewTextBoxColumn.Name = "返还日期DataGridViewTextBoxColumn"
+        Me.返还日期DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        '
+        '备注DataGridViewTextBoxColumn1
+        '
+        Me.备注DataGridViewTextBoxColumn1.DataPropertyName = "备注"
+        Me.备注DataGridViewTextBoxColumn1.HeaderText = "备注"
+        Me.备注DataGridViewTextBoxColumn1.Name = "备注DataGridViewTextBoxColumn1"
+        '
+        '日期DataGridViewTextBoxColumn
+        '
+        '
+        '
+        '
+        Me.日期DataGridViewTextBoxColumn.BackgroundStyle.BackColor = System.Drawing.Color.White
+        Me.日期DataGridViewTextBoxColumn.BackgroundStyle.Class = "DataGridViewDateTimeBorder"
+        Me.日期DataGridViewTextBoxColumn.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.日期DataGridViewTextBoxColumn.BackgroundStyle.TextColor = System.Drawing.Color.Black
+        Me.日期DataGridViewTextBoxColumn.DataPropertyName = "日期"
+        Me.日期DataGridViewTextBoxColumn.HeaderText = "日期与时间"
+        Me.日期DataGridViewTextBoxColumn.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left
+        Me.日期DataGridViewTextBoxColumn.MinimumWidth = 10
+        '
+        '
+        '
+        Me.日期DataGridViewTextBoxColumn.MonthCalendar.AnnuallyMarkedDates = New Date(-1) {}
+        '
+        '
+        '
+        Me.日期DataGridViewTextBoxColumn.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.日期DataGridViewTextBoxColumn.MonthCalendar.CalendarDimensions = New System.Drawing.Size(1, 1)
+        '
+        '
+        '
+        Me.日期DataGridViewTextBoxColumn.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.日期DataGridViewTextBoxColumn.MonthCalendar.DisplayMonth = New Date(2021, 1, 1, 0, 0, 0, 0)
+        Me.日期DataGridViewTextBoxColumn.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday
+        Me.日期DataGridViewTextBoxColumn.MonthCalendar.MarkedDates = New Date(-1) {}
+        Me.日期DataGridViewTextBoxColumn.MonthCalendar.MonthlyMarkedDates = New Date(-1) {}
+        '
+        '
+        '
+        Me.日期DataGridViewTextBoxColumn.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.日期DataGridViewTextBoxColumn.MonthCalendar.WeeklyMarkedDays = New System.DayOfWeek(-1) {}
+        Me.日期DataGridViewTextBoxColumn.Name = "日期DataGridViewTextBoxColumn"
+        Me.日期DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        '
+        '备注DataGridViewTextBoxColumn
+        '
+        Me.备注DataGridViewTextBoxColumn.DataPropertyName = "备注"
+        Me.备注DataGridViewTextBoxColumn.HeaderText = "备注"
+        Me.备注DataGridViewTextBoxColumn.MinimumWidth = 10
+        Me.备注DataGridViewTextBoxColumn.Name = "备注DataGridViewTextBoxColumn"
+        '
         'Form3
         '
-        Me.ClientSize = New System.Drawing.Size(741, 529)
+        Me.ClientSize = New System.Drawing.Size(741, 523)
         Me.Controls.Add(Me.SuperTabControl2)
         Me.Controls.Add(Me.MetroStatusBar1)
         Me.Controls.Add(Me.SuperTabControl1)
@@ -3136,8 +3196,6 @@ Partial Class Form3
     Friend WithEvents DatabaseCBCDataSetUH1 As 班级图书管理器.DatabaseCBCDataSetUH1
     Friend WithEvents UpdateHistoryBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents UpdateHistoryTableAdapter As 班级图书管理器.DatabaseCBCDataSetUH1TableAdapters.UpdateHistoryTableAdapter
-    Friend WithEvents 日期DataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents 备注DataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ButtonItem2 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents ButtonItem3 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents MetroStatusBar1 As DevComponents.DotNetBar.Metro.MetroStatusBar
@@ -3328,6 +3386,9 @@ Partial Class Form3
     Friend WithEvents 图书名称DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents 是否借出DataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
     Friend WithEvents 借出人姓名DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents 预定返还日期 As DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn
-    Friend WithEvents 备注 As DataGridViewTextBoxColumn
+    Friend WithEvents 借出日期DataGridViewTextBoxColumn As DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn
+    Friend WithEvents 返还日期DataGridViewTextBoxColumn As DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn
+    Friend WithEvents 备注DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents 日期DataGridViewTextBoxColumn As DevComponents.DotNetBar.Controls.DataGridViewDateTimeInputColumn
+    Friend WithEvents 备注DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

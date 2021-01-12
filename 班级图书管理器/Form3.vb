@@ -1,4 +1,16 @@
-﻿Public Class Form3
+﻿' Class Book Controller
+' Bug Fix 0: To compile this program, you need to install DotNetBar 12.0
+' Bug Fix 1: Enable Update function in xsd config in Advanced Option.
+' Bug Fix 2: Do not regenerate program if you want to see the saved file!
+' The regreneration process will overwrite the original saved file with the presaved one! Just compile and run in the folder!
+' LogCreative 2021 redist version
+' (LC) Log Creative 2015
+' MIT License
+
+''' <summary>
+''' 主窗格
+''' </summary>
+Public Class Form3
     Dim chc, enc, uhc As Boolean
     Dim cp As Boolean
     Private Sub Form3_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
@@ -12,7 +24,9 @@
         My.Settings.SLeftw = Me.Left
         My.Settings.STopw = Me.Top
         My.Settings.Themes = Me.ComboBox3.Text
-        Me.ChineseTableAdapter.Connection.Close()
+        Me.ChineseTableAdapter2.Connection.Close()
+        Me.EnglishTableAdapter3.Connection.Close()
+        Me.UpdateHistoryTableAdapter1.Connection.Close()
     End Sub
 
 
@@ -112,23 +126,21 @@
             If Me.SuperTabControl1.SelectedTabIndex = 0 Then
                 DataGridViewX1.EndEdit()
                 If DatabaseCBCDataSet4.HasChanges Then
-                    'FIXME: lost method of Update
-                    ChineseTableAdapter2.Update(DatabaseCBCDataSet4.GetChanges)
+                    ChineseTableAdapter2.Adapter.Update(DatabaseCBCDataSet4.GetChanges)
                 End If
                 chc = False
                 Me.LabelState.Text = "保存信息：保存 [ 语文 ] 已成功。"
             ElseIf Me.SuperTabControl1.SelectedTabIndex = 1 Then
                 DataGridViewX2.EndEdit()
                 If DatabaseCBCDataSet5.HasChanges Then
-                    'FIXME: lost method of Update
-                    EnglishTableAdapter3.Update(DatabaseCBCDataSet5.GetChanges)
+                    EnglishTableAdapter3.Adapter.Update(DatabaseCBCDataSet5.GetChanges)
                 End If
                 enc = False
                 Me.LabelState.Text = "保存信息：保存 [ 英语 ] 已成功。"
             ElseIf Me.SuperTabControl1.SelectedTabIndex = 2 Then
                 DataGridViewX3.EndEdit()
                 If DatabaseCBCDataSetUH2.HasChanges Then
-                    UpdateHistoryTableAdapter1.Update(DatabaseCBCDataSetUH2.GetChanges)
+                    UpdateHistoryTableAdapter1.Adapter.Update(DatabaseCBCDataSetUH2.GetChanges)
                 End If
                 uhc = False
                 Me.LabelState.Text = "保存信息：保存 [ 更新记录 ] 已成功。"
@@ -168,15 +180,15 @@
         Try
             DataGridViewX1.EndEdit()
             If DatabaseCBCDataSet4.HasChanges Then
-                ChineseTableAdapter.Update(DatabaseCBCDataSet4.GetChanges)
+                ChineseTableAdapter2.Adapter.Update(DatabaseCBCDataSet4.GetChanges)
             End If
             DataGridViewX2.EndEdit()
             If DatabaseCBCDataSet5.HasChanges Then
-                EnglishTableAdapter1.Update(DatabaseCBCDataSet5.GetChanges)
+                EnglishTableAdapter3.Adapter.Update(DatabaseCBCDataSet5.GetChanges)
             End If
             DataGridViewX3.EndEdit()
             If DatabaseCBCDataSetUH2.HasChanges Then
-                UpdateHistoryTableAdapter1.Update(DatabaseCBCDataSetUH2.GetChanges)
+                UpdateHistoryTableAdapter1.Adapter.Update(DatabaseCBCDataSetUH2.GetChanges)
             End If
             chc = False
             enc = False
@@ -248,8 +260,8 @@
                 Case 0
                     Dim sr As Integer
                     sr = CInt(Me.DataGridViewX1.SelectedCells(0).RowIndex.ToString)
-                        Me.DataGridViewX1.Rows.RemoveAt(sr)
-                        Me.LabelState.Text = "删除信息：删除了选定行(" & sr & ")。"
+                    Me.DataGridViewX1.Rows.RemoveAt(sr)
+                    Me.LabelState.Text = "删除信息：删除了选定行(" & sr & ")。"
                 Case 1
                     Dim sr As Integer
                     sr = CInt(Me.DataGridViewX2.SelectedCells(0).RowIndex.ToString)
@@ -267,7 +279,7 @@
             Me.LabelState.Text = "错误信息：删除行时出现异常。(0x6)"
             Form5.Show()
         End Try
-        
+
     End Sub
 
     Private Sub DataGridViewX1_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewX1.CellValueChanged

@@ -136,6 +136,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabaseCBCDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseCBCDataSet4.vb">
+      <DependentUpon>DatabaseCBCDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseCBCDataSet5.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -157,6 +160,9 @@
     <Compile Include="DatabaseCBCDataSetEnglish2.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseCBCDataSetEnglish2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseCBCDataSetEnglish2.vb">
       <DependentUpon>DatabaseCBCDataSetEnglish2.xsd</DependentUpon>
     </Compile>
     <Compile Include="DatabaseCBCDataSetUH1.Designer.vb">
