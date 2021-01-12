@@ -654,6 +654,14 @@ Public Class Form3
 
     End Sub
 
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Try
+            System.Diagnostics.Process.Start("https://github.com/LogCreative/ClassBookController")
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
     Private Sub ButtonItem24_Click(sender As Object, e As EventArgs) Handles ButtonItem24.Click
         Me.Left = My.Computer.Screen.Bounds.Width.ToString - Me.Width
         Me.Top = My.Computer.Screen.Bounds.Height.ToString - Me.Height - 40
