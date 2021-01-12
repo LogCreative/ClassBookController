@@ -121,16 +121,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabaseCBCDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseCBCDataSet21.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseCBCDataSet21.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseCBCDataSet31.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseCBCDataSet31.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DatabaseCBCDataSet4.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -143,32 +133,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabaseCBCDataSet5.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseCBCDataSetChinese1.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseCBCDataSetChinese1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseCBCDataSetChinese1.vb">
-      <DependentUpon>DatabaseCBCDataSetChinese1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseCBCDataSetEnglish1.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseCBCDataSetEnglish1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseCBCDataSetEnglish2.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseCBCDataSetEnglish2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseCBCDataSetEnglish2.vb">
-      <DependentUpon>DatabaseCBCDataSetEnglish2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseCBCDataSetUH1.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseCBCDataSetUH1.xsd</DependentUpon>
     </Compile>
     <Compile Include="DatabaseCBCDataSetUH2.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -268,28 +232,6 @@
     <None Include="DatabaseCBCDataSet1.xss">
       <DependentUpon>DatabaseCBCDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="DatabaseCBCDataSet21.xsc">
-      <DependentUpon>DatabaseCBCDataSet21.xsd</DependentUpon>
-    </None>
-    <None Include="DatabaseCBCDataSet21.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DatabaseCBCDataSet21.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DatabaseCBCDataSet21.xss">
-      <DependentUpon>DatabaseCBCDataSet21.xsd</DependentUpon>
-    </None>
-    <None Include="DatabaseCBCDataSet31.xsc">
-      <DependentUpon>DatabaseCBCDataSet31.xsd</DependentUpon>
-    </None>
-    <None Include="DatabaseCBCDataSet31.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DatabaseCBCDataSet31.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DatabaseCBCDataSet31.xss">
-      <DependentUpon>DatabaseCBCDataSet31.xsd</DependentUpon>
-    </None>
     <None Include="DatabaseCBCDataSet4.xsc">
       <DependentUpon>DatabaseCBCDataSet4.xsd</DependentUpon>
     </None>
@@ -311,50 +253,6 @@
     </None>
     <None Include="DatabaseCBCDataSet5.xss">
       <DependentUpon>DatabaseCBCDataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="DatabaseCBCDataSetChinese1.xsc">
-      <DependentUpon>DatabaseCBCDataSetChinese1.xsd</DependentUpon>
-    </None>
-    <None Include="DatabaseCBCDataSetChinese1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DatabaseCBCDataSetChinese1.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DatabaseCBCDataSetChinese1.xss">
-      <DependentUpon>DatabaseCBCDataSetChinese1.xsd</DependentUpon>
-    </None>
-    <None Include="DatabaseCBCDataSetEnglish1.xsc">
-      <DependentUpon>DatabaseCBCDataSetEnglish1.xsd</DependentUpon>
-    </None>
-    <None Include="DatabaseCBCDataSetEnglish1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DatabaseCBCDataSetEnglish1.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DatabaseCBCDataSetEnglish1.xss">
-      <DependentUpon>DatabaseCBCDataSetEnglish1.xsd</DependentUpon>
-    </None>
-    <None Include="DatabaseCBCDataSetEnglish2.xsc">
-      <DependentUpon>DatabaseCBCDataSetEnglish2.xsd</DependentUpon>
-    </None>
-    <None Include="DatabaseCBCDataSetEnglish2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DatabaseCBCDataSetEnglish2.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DatabaseCBCDataSetEnglish2.xss">
-      <DependentUpon>DatabaseCBCDataSetEnglish2.xsd</DependentUpon>
-    </None>
-    <None Include="DatabaseCBCDataSetUH1.xsc">
-      <DependentUpon>DatabaseCBCDataSetUH1.xsd</DependentUpon>
-    </None>
-    <None Include="DatabaseCBCDataSetUH1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DatabaseCBCDataSetUH1.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DatabaseCBCDataSetUH1.xss">
-      <DependentUpon>DatabaseCBCDataSetUH1.xsd</DependentUpon>
     </None>
     <None Include="DatabaseCBCDataSetUH2.xsc">
       <DependentUpon>DatabaseCBCDataSetUH2.xsd</DependentUpon>

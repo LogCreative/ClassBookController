@@ -478,8 +478,8 @@ Public Class Form3
     Private Sub ButtonItem12_Click(sender As Object, e As EventArgs) Handles ButtonItem12.Click
         DataGridViewX1.EndEdit()
         Try
-            If DatabaseCBCDataSetChinese1.HasChanges Then
-                ChineseTableAdapter.Update(DatabaseCBCDataSetChinese1.GetChanges)
+            If DatabaseCBCDataSet4.HasChanges Then
+                ChineseTableAdapter2.Update(DatabaseCBCDataSet4.GetChanges)
             End If
             chc = False
             Me.LabelState.Text = "保存信息：保存 [ 语文 ] 已成功。"
@@ -494,8 +494,8 @@ Public Class Form3
     Private Sub ButtonItem13_Click(sender As Object, e As EventArgs) Handles ButtonItem13.Click
         DataGridViewX2.EndEdit()
         Try
-            If DatabaseCBCDataSetEnglish2.HasChanges Then
-                EnglishTableAdapter1.Update(DatabaseCBCDataSetEnglish2.GetChanges)
+            If DatabaseCBCDataSet5.HasChanges Then
+                EnglishTableAdapter3.Update(DatabaseCBCDataSet5.GetChanges)
             End If
             enc = False
             Me.LabelState.Text = "保存信息：保存 [ 英语 ] 已成功。"
@@ -646,12 +646,20 @@ Public Class Form3
         Me.Top = My.Computer.Screen.Bounds.Height.ToString - Me.Height - 40
     End Sub
 
-    Private Sub ChineseBindingSource_CurrentChanged(sender As Object, e As EventArgs) Handles ChineseBindingSource.CurrentChanged
+    Private Sub ChineseBindingSource_CurrentChanged(sender As Object, e As EventArgs)
 
     End Sub
 
     Private Sub ChineseBindingSource2_CurrentChanged(sender As Object, e As EventArgs) Handles ChineseBindingSource2.CurrentChanged
 
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Try
+            System.Diagnostics.Process.Start("https://github.com/LogCreative/ClassBookController")
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub ButtonItem24_Click(sender As Object, e As EventArgs) Handles ButtonItem24.Click
