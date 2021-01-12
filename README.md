@@ -8,6 +8,8 @@ A tool to manage book borrowing.
 
 ![](program.gif)
 
+You can get the release version of this program in [Release Page](https://github.com/LogCreative/ClassBookController/releases). Initial password is **0000**.
+
 ## Objective
 
 - This program uses UI template of **DotNetBar 12.0** to make a ribbon style menu.
