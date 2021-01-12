@@ -1074,6 +1074,10 @@ Namespace DatabaseCBCDataSet5TableAdapters
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
+
+        Public Overridable Overloads Function Update(getChanges As DataSet)
+            Return Me.Adapter.Update(getChanges)
+        End Function
     End Class
     
     '''<summary>

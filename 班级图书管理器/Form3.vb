@@ -112,14 +112,16 @@
             If Me.SuperTabControl1.SelectedTabIndex = 0 Then
                 DataGridViewX1.EndEdit()
                 If DatabaseCBCDataSet4.HasChanges Then
-                    ChineseTableAdapter.Update(DatabaseCBCDataSet4.GetChanges)
+                    'FIXME: lost method of Update
+                    ChineseTableAdapter2.Update(DatabaseCBCDataSet4.GetChanges)
                 End If
                 chc = False
                 Me.LabelState.Text = "保存信息：保存 [ 语文 ] 已成功。"
             ElseIf Me.SuperTabControl1.SelectedTabIndex = 1 Then
                 DataGridViewX2.EndEdit()
                 If DatabaseCBCDataSet5.HasChanges Then
-                    EnglishTableAdapter1.Update(DatabaseCBCDataSet5.GetChanges)
+                    'FIXME: lost method of Update
+                    EnglishTableAdapter3.Update(DatabaseCBCDataSet5.GetChanges)
                 End If
                 enc = False
                 Me.LabelState.Text = "保存信息：保存 [ 英语 ] 已成功。"
@@ -630,6 +632,14 @@
     Private Sub ButtonItem23_Click(sender As Object, e As EventArgs) Handles ButtonItem23.Click
         Me.Left = 0
         Me.Top = My.Computer.Screen.Bounds.Height.ToString - Me.Height - 40
+    End Sub
+
+    Private Sub ChineseBindingSource_CurrentChanged(sender As Object, e As EventArgs) Handles ChineseBindingSource.CurrentChanged
+
+    End Sub
+
+    Private Sub ChineseBindingSource2_CurrentChanged(sender As Object, e As EventArgs) Handles ChineseBindingSource2.CurrentChanged
+
     End Sub
 
     Private Sub ButtonItem24_Click(sender As Object, e As EventArgs) Handles ButtonItem24.Click

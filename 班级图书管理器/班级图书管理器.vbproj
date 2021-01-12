@@ -34,7 +34,7 @@
     <BootstrapperComponentsUrl>E:\sql</BootstrapperComponentsUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
@@ -144,6 +144,9 @@
     <Compile Include="DatabaseCBCDataSetChinese1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseCBCDataSetChinese1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseCBCDataSetChinese1.vb">
       <DependentUpon>DatabaseCBCDataSetChinese1.xsd</DependentUpon>
     </Compile>
     <Compile Include="DatabaseCBCDataSetEnglish1.Designer.vb">
