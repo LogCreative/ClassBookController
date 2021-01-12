@@ -28,10 +28,10 @@ Then, open the `.sln` file. It's optional to open this project with 100% scaling
 To recompile the program, I fixed a 4-year-old bug **which causes the database unsavable**. It's also the reason for abadoning it long time ago when transfering data to use it in the second classroom. (Of cause, there's also a reason that the borrowing book activity was suspended when the schoolwork becomes much more heavier.)
 
 The details are as follows:
-- Modify the `.sfx` file, enable `Update()` function in ADVANCED OPTIONS. (which requires a key in the datatable.)
-- Changing the code of the table to make the database is saved to the corresponding original file.
+- Modified the `.sfx` file, enable `Update()` function in ADVANCED OPTIONS. (which requires a key in the datatable.)
+- Changed the code of the table to make the database is saved to the corresponding original file.
 - Changed the connection string to fit in the age where the `Jet` was disposed and everyone use `ACE` as an alternative (Microsoft Office Access Software required).
-- Only compile the solution without running the compiled program followed in Visual Studio, which will refresh the database file and you won't the saving effect of the database if you do so. **Just run the compiled file in the Explorer.**
+- Only compile the solution without running the compiled program followed in Visual Studio. **Just run the compiled file in the Explorer.** Regenerating the project will refresh the database from all over again and the debugger will not detect any mofication you made from the previous running.
 - I tried to clean auxilary bindings, but I failed due to the messy file structure left at that naive age. Just don't mess around with that, otherwise you may probably cannot open the designer file with some really confusing errors.
 
 ## Copyright
