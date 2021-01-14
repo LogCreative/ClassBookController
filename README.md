@@ -25,7 +25,7 @@ To compile this program, you need to install `DotNetBar 12.0` from DevComponents
 
 Then, open the `.sln` file. It's optional to open this project with 100% scaling for the plugin's compatibility. Just compile it.
 
-To recompile the program, I fixed a 4-year-old bug **which causes the database unsavable**. It's also the reason for abadoning it long time ago when transfering data to use it in the second classroom. (Of cause, there's also a reason that the borrowing book activity was suspended when the schoolwork becomes much more heavier.)
+To recompile the program, I fixed a 4-year-old bug **which causes the database unsavable**. It's also the reason for abadoning it long time ago when transfering data to use it in the second classroom. (Of course, there's also a reason that the borrowing book activity was suspended when the schoolwork becomes much more heavier.)
 
 The details are as follows:
 - Modified the `.sfx` file, enable `Update()` function in ADVANCED OPTIONS. (which requires a key in the datatable.)
