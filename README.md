@@ -29,9 +29,9 @@ To recompile the program, I fixed a 4-year-old bug **which causes the database u
 
 The details are as follows:
 - Modified the `.sfx` file, enable `Update()` function in ADVANCED OPTIONS. (which requires a key in the datatable.)
-- Changed the code of the table to make the database is saved to the corresponding original file.
+- Changed the code of the table to make sure that the database is saved to the corresponding original file.
 - Changed the connection string to fit in the age where the `Jet` was disposed and everyone use `ACE` as an alternative (Microsoft Office Access Software required).
-- Only compile the solution without running the compiled program followed in Visual Studio. **Just run the compiled file in the Explorer.** Regenerating the project will refresh the database from all over again and the debugger will not detect any mofication you made from the previous running.
+- Only compile the solution without running the compiled program followed in Visual Studio. **Just run the compiled file in the Explorer.** Regenerating the project will refresh the database from all over again and the debugger will not detect any modification you made from the previous running.
 - I tried to clean auxilary bindings, but I failed due to the messy file structure left at that naive age. Just don't mess around with that, otherwise you may probably cannot open the designer file with some really confusing errors.
 
 ## Copyright
